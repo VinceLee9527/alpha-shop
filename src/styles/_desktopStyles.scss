@@ -1,0 +1,182 @@
+// desktop
+@media screen and (min-width: 960px) {
+  #main-app {
+    width: 85%;
+  }
+  #main-header {
+    flex-direction: row;
+    justify-content: space-between;
+    .nav {
+      all: unset;
+      width: 350px;
+      .nav-list {
+        display: flex;
+        justify-content: space-between;
+        .nav-item {
+          all: unset;
+        }
+      }
+    }
+    .nav-logo {
+      position: static;
+    }
+    .symbols {
+      all: unset;
+      width: 300px;
+      display: flex;
+      justify-content: flex-end;
+      .fa-moon {
+        padding: 0;
+      }
+      .fa-shopping-cart {
+        padding-left: 0;
+      }
+      .fas {
+        padding-right: 30px;
+      }
+    }
+    .nav-toggle-label {
+      display: none;
+    }
+  }
+
+  #main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "left-content checkout-panel"
+      "control-panel checkout-panel";
+    margin-top: -30px;
+    .left-content {
+      flex: 1;
+      margin-right: 134px;
+      .main-title {
+        font-size: 2rem;
+        margin-top: 80px;
+      }
+    }
+  }
+
+  .stepper-container {
+    width: 100%;
+    .step {
+      display: flex;
+      align-items: center;
+      &.s2 {
+        justify-content: center;
+      }
+      &.s3 {
+        justify-content: flex-end;
+      }
+      .label-container {
+        display: block;
+      }
+      .circle-container {
+        margin: 0 8px 0 0;
+        height: 24px;
+        width: 24px;
+        &.c1,
+        &.c3 {
+          position: static;
+        }
+      }
+      .connect-line {
+        top: 14px;
+        &.l1 {
+          left: 70%;
+          right: -10%;
+        }
+        &.l2 {
+          left: 95%;
+          right: -30%;
+        }
+      }
+    }
+  }
+
+  .part {
+    &-title,
+    &-city {
+      grid-column: 1/3;
+    }
+    &-name,
+    &-address {
+      grid-column: 3/7;
+    }
+    &-phone {
+      grid-column: 1/4;
+    }
+    &-email {
+      grid-column: 4/7;
+    }
+    &-phone,
+    &-city {
+      margin-right: 30px;
+    }
+    &-shipping {
+      grid-column: 1/6;
+    }
+    &-cardholder-name,
+    &-cardnum {
+      grid-column: 1/5;
+    }
+  }
+
+  .checkout-panel {
+    margin-top: 181px;
+    height: 500px;
+    .checkout-title {
+      display: block !important;
+    }
+    .delivery-wrapper {
+      margin-top: 32px;
+      .delivery-title,
+      .delivery-fee {
+        padding: 16px 0 32px 0;
+      }
+    }
+  }
+
+  .control-panel {
+    justify-content: flex-end;
+    margin-right: 100px;
+    margin-top: -70px;
+    .btn-outline {
+      flex: 1;
+    }
+    .btn-primary {
+      flex: unset;
+      width: 174px;
+    }
+  }
+  footer {
+    display: block;
+    background-color: $light-gray;
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      width: 85%;
+      padding: 64px 0;
+      margin: 0 auto;
+      .footer-title {
+        @include titleStyle;
+      }
+      .footer-list {
+        padding-left: 4px;
+        .footer-list-item {
+          padding: 1px 0;
+          .footer-list-link {
+            color: $footer-gray;
+          }
+        }
+      }
+      .footer-list-social-icons {
+        width: 55%;
+        .social-icon {
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+  }
+}

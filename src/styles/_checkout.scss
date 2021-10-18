@@ -1,0 +1,72 @@
+.checkout-panel {
+  border: 2px solid $light-gray;
+  border-radius: 10px;
+  .checkout-container {
+    margin: 18px 16px 16px 16px;
+    .checkout-title {
+      font-size: 1.125rem;
+      display: none;
+    }
+    .product {
+      margin-bottom: 18px;
+      .product-description {
+        font-weight: 400;
+      }
+      .product-price-1,
+      .product-price-2 {
+        font-weight: 700;
+      }
+      .product-quantity {
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+        .product-quantity-plus,
+        .product-quantity-minus {
+          height: 27px;
+          width: 28px;
+          background-color: $light-gray;
+          border-radius: 50%;
+          text-align: center;
+          font-size: 1.2rem;
+          line-height: 25px;
+        }
+      }
+    }
+    .delivery-wrapper {
+      margin: 16px 0;
+      padding: 16px 0;
+      border-top: 1px solid $light-gray;
+      border-bottom: 1px solid $light-gray;
+      .delivery-fee {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.control-panel {
+  margin-top: 32px;
+  padding: 24px 0;
+  border-top: 2px solid $light-gray;
+  justify-content: space-between;
+  button {
+    height: 46px;
+    width: 100%;
+  }
+  .btn-outline {
+    align-items: center;
+    &::before {
+      content: "\2190";
+      margin-right: 0.78rem;
+    }
+  }
+  .btn-primary {
+    border-radius: 10px;
+    background-color: $p-button-color;
+    color: $white;
+    &::after {
+      content: "\2192";
+      margin-left: 0.78rem;
+    }
+  }
+}

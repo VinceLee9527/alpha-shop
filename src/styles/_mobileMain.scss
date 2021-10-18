@@ -1,0 +1,16 @@
+#main-app {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#main-content {
+  margin-top: 30px;
+}
+
+.main-title {
+  @extend %title-style;
+}
+
+footer {
+  display: none;
+}

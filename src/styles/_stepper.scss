@@ -1,0 +1,55 @@
+.stepper-container {
+  margin-bottom: 30px;
+  .step {
+    width: 100%;
+    position: relative;
+    @include getStepNums(3);
+    &.checked .circle-container::after {
+      content: "\2714";
+    }
+    &.checked,
+    &.active {
+      .circle-container {
+        color: $white;
+        background-color: $black;
+      }
+      .connect-line {
+        background-color: $black;
+      }
+    }
+    .circle-container {
+      margin: 0 auto;
+      height: 32px;
+      width: 32px;
+      color: $light-gray;
+      border: 1px solid $light-gray;
+      border-radius: 50%;
+      &.c1 {
+        position: absolute;
+        left: 0;
+      }
+      &.c3 {
+        position: absolute;
+        right: 0;
+      }
+    }
+    .label-container {
+      display: none;
+    }
+    .connect-line {
+      display: block;
+      position: absolute;
+      top: 12px;
+      height: 2px;
+      background-color: $light-gray;
+      &.l1 {
+        left: 30%;
+        right: -30%;
+      }
+      &.l2 {
+        left: 70%;
+        right: -70%;
+      }
+    }
+  }
+}
