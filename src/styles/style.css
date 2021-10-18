@@ -1,4 +1,5 @@
 /* reset css */
+/* reset css */
 body {
   margin: 0;
   padding: 0;
@@ -81,6 +82,7 @@ input:invalid {
   background: transparent;
 }
 
+/* basic settings */
 /* basic setting */
 .w-25 {
   width: 25%;
@@ -661,7 +663,7 @@ form input, form select {
   padding: 0.5em;
 }
 
-.part .form-header, .main-title {
+.main-title, .part .form-header {
   font-size: 1.5rem;
   font-weight: 700;
   padding: 0.2em 0;
@@ -800,6 +802,21 @@ body {
   grid-column: 1/7;
 }
 
+/*general large area settings - mobile */
+#main-app {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#main-content {
+  margin-top: 30px;
+}
+
+footer {
+  display: none;
+}
+
+/* header - mobile first */
 /* header */
 #main-header {
   padding: 21px 0;
@@ -912,6 +929,7 @@ body {
   background-color: #fff;
 }
 
+/* stepper - mobile first */
 .stepper-container {
   margin-bottom: 30px;
 }
@@ -987,9 +1005,12 @@ body {
   right: -70%;
 }
 
+/* main form - mobile first */
 .part {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
 }
 
 .part-title {
@@ -1126,6 +1147,7 @@ form select:invalid {
   color: #747474;
 }
 
+/* checkout section - mobile first */
 .checkout-panel {
   border: 2px solid #f0f0f5;
   border-radius: 10px;
@@ -1221,19 +1243,7 @@ form select:invalid {
   margin-left: 0.78rem;
 }
 
-#main-app {
-  width: 95%;
-  margin: 0 auto;
-}
-
-#main-content {
-  margin-top: 30px;
-}
-
-footer {
-  display: none;
-}
-
+/* media quearies - all desktop styles*/
 @media screen and (min-width: 960px) {
   #main-app {
     width: 85%;
@@ -1292,8 +1302,7 @@ footer {
     display: grid;
     -ms-grid-columns: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
-        grid-template-areas: "left-content checkout-panel"
- "control-panel checkout-panel";
+        grid-template-areas: "left-content checkout-panel" "control-panel checkout-panel";
     margin-top: -30px;
   }
   #main-content .left-content {

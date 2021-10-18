@@ -11,9 +11,10 @@ let step = 0;
 let total = 5298;
 let deliveryFee = 0;
 
+// function that adds comma to numbers (checkout section)
 let numberWithCommas = x => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-
+// function for increasing item number in cart (checkout section)
 let itemNumClicked = e => {
   if (
     e.target.matches(".product-quantity-minus") &&
@@ -40,6 +41,7 @@ let itemNumClicked = e => {
   totalPrice.innerText = "$" + numberWithCommas(total + Number(deliveryFee));
 }
 
+// function for prev/next form control (form section)
 let handleBtnControlClicked = e => {
   e.preventDefault();
   const nowStep = steps[step];
@@ -63,6 +65,7 @@ let handleBtnControlClicked = e => {
   setBtnDisabled();
 }
 
+// function that adds style to prev/next form button (form section)
 let setBtnDisabled = () => {
   if (step === 0) {
     prevBtn.classList.remove("d-flex");
