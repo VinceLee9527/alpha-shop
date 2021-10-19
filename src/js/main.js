@@ -12,7 +12,7 @@ let total = 5298;
 let deliveryFee = 0;
 
 // function that adds comma to numbers (checkout section)
-let numberWithCommas = x => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+let numberWithCommas = x => x.toLocaleString();
 
 // function for increasing item number in cart (checkout section)
 let itemNumClicked = e => {
