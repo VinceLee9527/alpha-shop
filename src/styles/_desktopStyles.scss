@@ -1,5 +1,5 @@
 // desktop
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 375px) {
   #main-app {
     width: 85%;
   }
@@ -8,7 +8,7 @@
     justify-content: space-between;
     .nav {
       all: unset;
-      width: 350px;
+      width: 30%;
       .nav-list {
         display: flex;
         justify-content: space-between;
@@ -22,7 +22,7 @@
     }
     .symbols {
       all: unset;
-      width: 300px;
+      width: 30%;
       display: flex;
       justify-content: flex-end;
       .fa-moon {
