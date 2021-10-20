@@ -11,6 +11,7 @@
   --checkout-background-color: #fff;
   --stepper-unchecked: #AFB1BD;
   --stepper-checked: #2A2A2A;
+  --stepper-checked-cl: #2A2A2A;
   --stepper-check: white;
   --nav-button-color: #F67599;
 }
@@ -29,6 +30,7 @@ html[data-theme="dark"] {
   --checkout-background-color: #383838;
   --stepper-unchecked: #F0F0F5;
   --stepper-checked: #333333;
+  --stepper-checked-cl: #F0F0F5;
   --stepper-check: white;
   --nav-button-color: #F67599;
 

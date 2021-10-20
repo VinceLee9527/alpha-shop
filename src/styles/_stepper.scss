@@ -16,7 +16,7 @@
         background-color: var(--stepper-checked);
       }
       .connect-line {
-        background-color: var(--stepper-checked);
+        background-color: var(--stepper-checked-cl);
         opacity: 1;
       }
       .label-container {
@@ -28,7 +28,7 @@
       position: absolute;
       top: 12px;
       height: 2px;
-      background-color: var(--stepper-unchecked);
+      background-color: var(--stepper-checked-cl);
       opacity: 0.5;
       &.l1 {
         left: 30%;

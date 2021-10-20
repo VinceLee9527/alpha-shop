@@ -96,6 +96,7 @@ input:invalid {
   --checkout-background-color: #fff;
   --stepper-unchecked: #AFB1BD;
   --stepper-checked: #2A2A2A;
+  --stepper-checked-cl: #2A2A2A;
   --stepper-check: white;
   --nav-button-color: #F67599;
 }
@@ -113,6 +114,7 @@ html[data-theme="dark"] {
   --checkout-background-color: #383838;
   --stepper-unchecked: #F0F0F5;
   --stepper-checked: #333333;
+  --stepper-checked-cl: #F0F0F5;
   --stepper-check: white;
   --nav-button-color: #F67599;
 }
@@ -996,7 +998,7 @@ footer {
 }
 
 .stepper-container .step.checked .connect-line, .stepper-container .step.active .connect-line {
-  background-color: var(--stepper-checked);
+  background-color: var(--stepper-checked-cl);
   opacity: 1;
 }
 
@@ -1009,7 +1011,7 @@ footer {
   position: absolute;
   top: 12px;
   height: 2px;
-  background-color: var(--stepper-unchecked);
+  background-color: var(--stepper-checked-cl);
   opacity: 0.5;
 }
 
@@ -1050,8 +1052,10 @@ footer {
 
 /* main form - mobile first */
 .part {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
 }
 
 .part-title {
@@ -1355,8 +1359,7 @@ form select:invalid {
     display: grid;
     -ms-grid-columns: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
-        grid-template-areas: "left-content checkout-panel"
- "control-panel checkout-panel";
+        grid-template-areas: "left-content checkout-panel" "control-panel checkout-panel";
     margin-top: -30px;
   }
   #main-content .left-content {
