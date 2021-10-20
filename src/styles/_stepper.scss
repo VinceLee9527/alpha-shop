@@ -4,25 +4,47 @@
     width: 100%;
     position: relative;
     @include getStepNums(3);
+    color: var(--stepper-check);
     &.checked .circle-container::after {
       content: "\2714";
+      color: var(--stepper-check);
     }
     &.checked,
     &.active {
       .circle-container {
-        color: $white;
-        background-color: $black;
+        color: white;
+        background-color: var(--stepper-checked);
       }
       .connect-line {
-        background-color: $black;
+        background-color: var(--stepper-checked);
+        opacity: 1;
+      }
+      .label-container {
+        opacity: 1;
+      }
+    }
+    .connect-line {
+      display: block;
+      position: absolute;
+      top: 12px;
+      height: 2px;
+      background-color: var(--stepper-unchecked);
+      opacity: 0.5;
+      &.l1 {
+        left: 30%;
+        right: -30%;
+      }
+      &.l2 {
+        left: 70%;
+        right: -70%;
       }
     }
     .circle-container {
       margin: 0 auto;
       height: 32px;
       width: 32px;
-      color: $light-gray;
-      border: 1px solid $light-gray;
+      color: var(--stepper-unchecked);
+      border: 1px solid var(--stepper-unchecked);
       border-radius: 50%;
       &.c1 {
         position: absolute;
@@ -35,21 +57,9 @@
     }
     .label-container {
       display: none;
+      opacity: 0.5;
+      color: var(--body-text-color);
     }
-    .connect-line {
-      display: block;
-      position: absolute;
-      top: 12px;
-      height: 2px;
-      background-color: $light-gray;
-      &.l1 {
-        left: 30%;
-        right: -30%;
-      }
-      &.l2 {
-        left: 70%;
-        right: -70%;
-      }
-    }
+    
   }
 }

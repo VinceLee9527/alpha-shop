@@ -1,6 +1,7 @@
 .checkout-panel {
-  border: 2px solid $light-gray;
+  border: 2px solid var(--border-color);
   border-radius: 10px;
+  background-color: var(--checkout-background-color);
   .checkout-container {
     margin: 18px 16px 16px 16px;
     .checkout-title {
@@ -24,7 +25,7 @@
         .product-quantity-minus {
           height: 27px;
           width: 28px;
-          background-color: $light-gray;
+          background-color: var(--plus-minus-bg);
           border-radius: 50%;
           text-align: center;
           font-size: 1.2rem;
@@ -35,8 +36,8 @@
     .delivery-wrapper {
       margin: 16px 0;
       padding: 16px 0;
-      border-top: 1px solid $light-gray;
-      border-bottom: 1px solid $light-gray;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
       .delivery-fee {
         font-weight: 700;
       }
@@ -47,7 +48,7 @@
 .control-panel {
   margin-top: 32px;
   padding: 24px 0;
-  border-top: 2px solid $light-gray;
+  border-top: 2px solid var(--border-color);
   justify-content: space-between;
   button {
     height: 46px;
@@ -55,6 +56,7 @@
   }
   .btn-outline {
     align-items: center;
+    color: var(--body-text-color);
     &::before {
       content: "\2190";
       margin-right: 0.78rem;
@@ -62,8 +64,8 @@
   }
   .btn-primary {
     border-radius: 10px;
-    background-color: $p-button-color;
-    color: $white;
+    background-color: var(--nav-button-color);
+    color: white;
     &::after {
       content: "\2192";
       margin-left: 0.78rem;

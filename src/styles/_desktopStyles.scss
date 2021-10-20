@@ -25,7 +25,7 @@
       width: 30%;
       display: flex;
       justify-content: flex-end;
-      .fa-moon {
+      .fa-moon, .fa {
         padding: 0;
       }
       .fa-shopping-cart {
@@ -151,7 +151,7 @@
   }
   footer {
     display: block;
-    background-color: $light-gray;
+    background-color: var(--footer-background-color);
     .footer-container {
       display: flex;
       justify-content: space-between;
@@ -166,7 +166,7 @@
         .footer-list-item {
           padding: 1px 0;
           .footer-list-link {
-            color: $footer-gray;
+            color: var(--footer-text-color);
           }
         }
       }

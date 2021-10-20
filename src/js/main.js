@@ -7,6 +7,13 @@ const nextBtn = btnControl.querySelector(".btn-primary");
 const prevBtn = btnControl.querySelector(".btn-outline");
 const totalPrice = document.querySelector(".total-price");
 const totalDelivery = main.querySelector(".delivery-fee");
+const darkTheme = document.querySelector(".theme-dark");
+const lightTheme = document.querySelector(".theme-light");
+const darkLogoHeader = document.querySelector(".navbar-logo-dark");
+const lightLogoHeader = document.querySelector(".navbar-logo-light");
+const darkLogoFooter = document.querySelector(".footer-logo-dark");
+const lightLogoFooter = document.querySelector(".footer-logo-light");
+
 let step = 0;
 let total = 5298;
 let deliveryFee = 0;
@@ -79,6 +86,26 @@ let setBtnDisabled = () => {
     nextBtn.innerHTML = "下一步";
   }
 }
+
+darkTheme.addEventListener("click", () => {
+  document.documentElement.setAttribute("data-theme", "dark");
+  darkTheme.classList.add("d-none");
+  lightTheme.classList.remove("d-none");
+  lightLogoHeader.classList.add("d-none");
+  darkLogoHeader.classList.remove("d-none");
+  lightLogoFooter.classList.add("d-none");
+  darkLogoFooter.classList.remove("d-none");
+});
+
+lightTheme.addEventListener("click", () => {
+  document.documentElement.setAttribute("data-theme", "light");
+  lightTheme.classList.add("d-none");
+  darkTheme.classList.remove("d-none");
+  lightLogoHeader.classList.remove("d-none");
+  darkLogoHeader.classList.add("d-none");
+  lightLogoFooter.classList.remove("d-none");
+  darkLogoFooter.classList.add("d-none");
+});
 
 main.addEventListener("click", itemNumClicked);
 btnControl.addEventListener("click", handleBtnControlClicked);

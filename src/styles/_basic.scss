@@ -1,14 +1,4 @@
 /* basic setting */
-$body-bg: #f8f7fc;
-$body-color: #474a50;
-$black: #000;
-$white: #fff;
-$dark-gray: #4a4a4a;
-$light-gray: #f0f0f5;
-$footer-gray: #808080;
-
-$p-button-color: #f67599;
-
 $main-font: "Noto Sans TC", sans-serif;
 
 $sizes: (
@@ -17,6 +7,7 @@ $sizes: (
   75: 75%,
   100: 100%
 );
+
 
 @each $prop, $abbrev in (width: w, height: h) {
   @each $num, $val in $sizes {
@@ -102,7 +93,7 @@ $spacers: (
 
 %input-style {
   font-size: 16px;
-  border: 1px solid $black;
+  border: 1px solid var(--body-text-color);
   border-radius: 5px;
   padding: 0.5em;
 }
@@ -114,13 +105,6 @@ $spacers: (
 html {
   font-size: 16px;
   height: 100%;
-}
-
-body {
-  height: 100%;
-  background: $white;
-  color: $body-color;
-  font-family: $main-font;
 }
 
 .d-none {
